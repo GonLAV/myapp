@@ -5,3 +5,4 @@ screenshots/
 .env
 *.js.map
 coverage/
+.foreman/

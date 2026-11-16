@@ -1,0 +1,29 @@
+{
+  "_הסבר": "דוגמה. ההתקנה יוצרת config.json אמיתי בתיקייה job-watchdog שבתיקיית המשתמש. כל שדה שמתחיל ב-_ הוא הסבר בלבד.",
+  "MorningHour": 8,
+  "ConfirmMinutes": 30,
+  "RepeatAlertHours": 24,
+  "Mail": {
+    "Method": "outlook",
+    "To": "you@example.com",
+    "SmtpServer": "smtp.gmail.com",
+    "SmtpPort": 587,
+    "SmtpUser": ""
+  },
+  "Jobs": [
+    {
+      "_הסבר": "משימה שנבדקת רק לפי Task Scheduler: שרצה בזמן ושהקוד שלה 0",
+      "Name": "גיבוי יומי",
+      "Task": "Daily backup",
+      "MaxHoursSinceRun": 28.4
+    },
+    {
+      "_הסבר": "משימה שגם כותבת קובץ מצב בסוף ריצה. %LOCALAPPDATA% ושאר משתני הסביבה עובדים בנתיב",
+      "Name": "ייצוא נתונים",
+      "Task": "My export",
+      "StatusFile": "%LOCALAPPDATA%\\my-export\\last-status.txt",
+      "SuccessText": "הצליח",
+      "MaxHoursSinceRun": 28.4
+    }
+  ]
+}
